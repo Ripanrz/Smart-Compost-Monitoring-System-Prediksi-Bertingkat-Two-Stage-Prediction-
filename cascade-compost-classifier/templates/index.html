@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediksi Kualitas Kompos</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body { background-color: #f4f7f6; }
+        .card { border-radius: 15px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
+        .header-title { color: #2c3e50; font-weight: bold; }
+        .result-box { background-color: #ffffff; border-radius: 10px; padding: 20px; border: 1px solid #dee2e6; }
+    </style>
+</head>
+<body>
+
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8 col-lg-6">
+            
+            <div class="text-center mb-4">
+                <h2 class="header-title">🌱 Smart Compost Analyzer</h2>
+                <p class="text-muted">Deteksi Kematangan Kompos Berbasis AI</p>
+            </div>
+
+            <div class="card p-4">
+                <form action="/predict" method="POST">
+                    
+                    <div class="mb-3">
+                        <label for="temperature" class="form-label fw-bold">🌡️ Suhu (Temperature °C)</label>
+                        <input type="number" step="0.1" class="form-control" name="temperature" id="temperature" placeholder="Contoh: 35.5" required value="{{ input_temp }}">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="mc" class="form-label fw-bold">💧 Kelembaban (MC %)</label>
+                        <input type="number" step="0.1" class="form-control" name="mc" id="mc" placeholder="Contoh: 60.0" required value="{{ input_mc }}">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="ph" class="form-label fw-bold">🧪 Keasaman (pH)</label>
+                        <input type="number" step="0.1" class="form-control" name="ph" id="ph" placeholder="Contoh: 7.2" required value="{{ input_ph }}">
+                    </div>
+
+                    <div class="d-grid gap-2 mt-4">
+                        <button type="submit" class="btn btn-primary btn-lg">🔍 Analisis Kompos</button>
+                    </div>
+                </form>
+            </div>
+
+            {% if show_result %}
+            <div class="card mt-4 result-box">
+                <h4 class="text-center mb-4">Hasil Analisis</h4>
+                
+                <div class="row text-center">
+                    <div class="col-6">
+                        <p class="text-muted mb-1">Prediksi Ammonia</p>
+                        <h3 class="text-primary">{{ ammonia_value }}</h3>
+                    </div>
+
+                    <div class="col-6">
+                        <p class="text-muted mb-1">Status Kematangan</p>
+                        <h3>
+                            <span class="badge bg-{{ color_class }}">{{ prediction_text }}</span>
+                        </h3>
+                    </div>
+                </div>
+
+                <hr>
+                <div class="alert alert-info mt-3 mb-0" role="alert">
+                    <small>
+                        <i class="bi bi-info-circle"></i> 
+                        Sistem memprediksi kadar Ammonia berdasarkan Suhu, MC, dan pH, lalu menggunakan nilai tersebut untuk menentukan status kematangan.
+                    </small>
+                </div>
+            </div>
+            {% endif %}
+
+            {% if error_text %}
+            <div class="alert alert-danger mt-3" role="alert">
+                {{ error_text }}
+            </div>
+            {% endif %}
+
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
