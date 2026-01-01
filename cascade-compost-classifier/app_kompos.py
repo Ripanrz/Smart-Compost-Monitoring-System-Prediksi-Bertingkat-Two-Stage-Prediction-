@@ -9,7 +9,7 @@ app = Flask(__name__)
 # ==============================================================================
 # 1. SETUP MODEL PATH
 # ==============================================================================
-MODEL_PATH = r"C:\Users\arpan\Downloads\kompos_ML\models"
+MODEL_PATH = r"C:\Users\arpan\Downloads\cascade-compost-classifier\models"
 
 AMMONIA_MODEL_FILE = os.path.join(MODEL_PATH, "Ripan_model_prediksi_ammonia.pkl")
 MATURITY_MODEL_FILE = os.path.join(MODEL_PATH, "Ripan_model_maturity_hybrid.pkl")
@@ -99,4 +99,5 @@ def predict():
 
 if __name__ == "__main__":
     print("🚀 Menjalankan Server Flask...")
+
     app.run(debug=True)
