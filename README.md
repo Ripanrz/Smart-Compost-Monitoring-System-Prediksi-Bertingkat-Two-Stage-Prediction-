@@ -11,6 +11,12 @@ Pendekatan ini dirancang untuk mengatasi keterbatasan **sensor fisik Ammonia (mg
 
 ---
 
+## 📸 Tampilan Antarmuka
+
+![Tampilan Dashboard](Dashboard-NonKapitasi_FKTP.png)
+
+---
+
 ## 🚀 Gambaran Umum Sistem
 
 Sistem bekerja melalui **dua tahap prediksi utama**:
