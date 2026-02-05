@@ -13,7 +13,7 @@ Pendekatan ini dirancang untuk mengatasi keterbatasan **sensor fisik Ammonia (mg
 
 ## 📸 Tampilan Antarmuka
 
-![Tampilan Dashboard](Dashboard-NonKapitasi_FKTP.png)
+![Tampilan Dashboard](cascade-compost-classifier/Dashboard_Compost.png)
 
 ---
 
