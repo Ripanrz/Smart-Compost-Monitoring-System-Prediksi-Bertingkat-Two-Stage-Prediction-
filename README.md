@@ -1,7 +1,7 @@
 # 🌱 Model Prediksi Bertingkat (Two-Stage Prediction)  
 ## Estimasi Kadar Amonia & Klasifikasi Status Kematangan Kompos
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)]
+![Google Colab](https://colab.research.google.com/assets/colab-badge.svg)
 ![Python](https://img.shields.io/badge/Python-3.x-blue.svg)
 ![Scikit-Learn](https://img.shields.io/badge/Library-Scikit--Learn-orange.svg)
 ![Flask](https://img.shields.io/badge/Deployment-Flask-lightgrey.svg)
