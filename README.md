@@ -1,5 +1,4 @@
-# 🌱 Model Prediksi Bertingkat (Two-Stage Prediction)  
-## Estimasi Kadar Amonia & Klasifikasi Status Kematangan Kompos
+# 🌱 Model Prediksi Bertingkat (Two-Stage Prediction): Estimasi Kadar Amonia & Klasifikasi Status Kematangan Kompos
 
 ![Python](https://img.shields.io/badge/Python-3.x-blue.svg)
 ![Extra Trees](https://img.shields.io/badge/Model-Extra_Trees-green)
